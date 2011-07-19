@@ -13,6 +13,9 @@
 		3CD22C1013D5EBFF001844CD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3CD22C0E13D5EBFF001844CD /* InfoPlist.strings */; };
 		3CD22C1213D5EBFF001844CD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CD22C1113D5EBFF001844CD /* main.m */; };
 		3CD22C1613D5EBFF001844CD /* CubeAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CD22C1513D5EBFF001844CD /* CubeAppDelegate.m */; };
+		3CD22C1D13D5ED4D001844CD /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CD22C1C13D5ED4D001844CD /* OpenGLES.framework */; };
+		3CD22C1F13D5ED53001844CD /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CD22C1E13D5ED53001844CD /* GLKit.framework */; };
+		3CD22C2113D5ED58001844CD /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CD22C2013D5ED58001844CD /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +23,15 @@
 		3CD22C0513D5EBFF001844CD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3CD22C0713D5EBFF001844CD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3CD22C0913D5EBFF001844CD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		3CD22C0D13D5EBFF001844CD /* Cube-Info.plist */ = {isa = PBXFileReference; path = "Cube-Info.plist"; sourceTree = "<group>"; };
+		3CD22C0D13D5EBFF001844CD /* Cube-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Cube-Info.plist"; sourceTree = "<group>"; };
 		3CD22C0F13D5EBFF001844CD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3CD22C1113D5EBFF001844CD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		3CD22C1313D5EBFF001844CD /* Cube-Prefix.pch */ = {isa = PBXFileReference; path = "Cube-Prefix.pch"; sourceTree = "<group>"; };
-		3CD22C1413D5EBFF001844CD /* CubeAppDelegate.h */ = {isa = PBXFileReference; path = CubeAppDelegate.h; sourceTree = "<group>"; };
+		3CD22C1313D5EBFF001844CD /* Cube-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Cube-Prefix.pch"; sourceTree = "<group>"; };
+		3CD22C1413D5EBFF001844CD /* CubeAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CubeAppDelegate.h; sourceTree = "<group>"; };
 		3CD22C1513D5EBFF001844CD /* CubeAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CubeAppDelegate.m; sourceTree = "<group>"; };
+		3CD22C1C13D5ED4D001844CD /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		3CD22C1E13D5ED53001844CD /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		3CD22C2013D5ED58001844CD /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +39,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CD22C2113D5ED58001844CD /* QuartzCore.framework in Frameworks */,
+				3CD22C1F13D5ED53001844CD /* GLKit.framework in Frameworks */,
+				3CD22C1D13D5ED4D001844CD /* OpenGLES.framework in Frameworks */,
 				3CD22C0613D5EBFF001844CD /* UIKit.framework in Frameworks */,
 				3CD22C0813D5EBFF001844CD /* Foundation.framework in Frameworks */,
 				3CD22C0A13D5EBFF001844CD /* CoreGraphics.framework in Frameworks */,
@@ -62,6 +71,9 @@
 		3CD22C0413D5EBFF001844CD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3CD22C2013D5ED58001844CD /* QuartzCore.framework */,
+				3CD22C1E13D5ED53001844CD /* GLKit.framework */,
+				3CD22C1C13D5ED4D001844CD /* OpenGLES.framework */,
 				3CD22C0513D5EBFF001844CD /* UIKit.framework */,
 				3CD22C0713D5EBFF001844CD /* Foundation.framework */,
 				3CD22C0913D5EBFF001844CD /* CoreGraphics.framework */,

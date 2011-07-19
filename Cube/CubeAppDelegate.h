@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <GLKit/GLKit.h>
 
-@interface CubeAppDelegate : UIResponder <UIApplicationDelegate>
+@interface CubeAppDelegate : UIResponder <UIApplicationDelegate, GLKViewDelegate, GLKViewControllerDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
