@@ -37,18 +37,23 @@
   cube.position = GLKVector3Make(0.25, 0.25, 0.0);
   cube.scale = GLKVector3Make(0.5, 0.5, 0.5);
   cube.rotation = GLKVector3Make(1.0/8*M_TAU, 1.0/8*M_TAU, 0);
+  cube.rps = GLKVector3Make(0.5, 0.4, 0.3);
   [cubes addObject:cube];
   
   ColorfulCube *cube2 = [[ColorfulCube alloc] init];
   cube2.position = GLKVector3Make(-0.5, -0.25, 0.0);
   cube2.scale = GLKVector3Make(0.4, 0.4, 0.4);
   cube2.rotation = GLKVector3Make(1.0/8*M_TAU, 0, 1.0/8*M_TAU);
+  cube2.rps = GLKVector3Make(0.3, 0.5, 0.4);
   [cubes addObject:cube2];
   
   return YES;
 }
 
 - (void)glkViewControllerUpdate:(GLKViewController *)controller {
+  NSTimeInterval dt = [controller timeSinceLastDraw];
+  for (id cube in cubes)
+    [((ColorfulCube *)cube) updateRotations:dt];
 }
 
 - (void)glkView:(GLKView *)view drawInRect:(CGRect)rect {

@@ -10,11 +10,12 @@
 #import <GLKit/GLKit.h>
 
 @interface ColorfulCube : NSObject {
-  GLKVector3 position, rotation, scale;
+  GLKVector3 position, rotation, scale, rps;
 }
 
-@property GLKVector3 position, rotation, scale;
+@property GLKVector3 position, rotation, scale, rps;
 
 - (void)draw;
+- (void)updateRotations:(NSTimeInterval)dt;
 
 @end

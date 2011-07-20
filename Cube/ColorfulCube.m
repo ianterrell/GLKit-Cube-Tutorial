@@ -18,7 +18,7 @@ static GLKBaseEffect *effect;
 
 @implementation ColorfulCube
 
-@synthesize position, rotation, scale;
+@synthesize position, rotation, scale, rps;
 
 - (id)init
 {
@@ -114,6 +114,10 @@ static GLKBaseEffect *effect;
   
   glDisableVertexAttribArray(GLKVertexAttribPosition);
   glDisableVertexAttribArray(GLKVertexAttribColor);
+}
+
+- (void)updateRotations:(NSTimeInterval)dt {
+  rotation = GLKVector3Add(rotation, GLKVector3MultiplyScalar(rps, dt));
 }
 
 @end
