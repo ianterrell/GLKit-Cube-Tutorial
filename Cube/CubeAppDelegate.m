@@ -9,6 +9,8 @@
 #import "CubeAppDelegate.h"
 #import "ColorfulCube.h"
 
+#define M_TAU (2*M_PI)
+
 @implementation CubeAppDelegate
 
 @synthesize window = _window;
@@ -29,6 +31,20 @@
   self.window.rootViewController = controller;
   [self.window makeKeyAndVisible];
   
+  cubes = [[NSMutableArray alloc] init];
+  
+  ColorfulCube *cube = [[ColorfulCube alloc] init];
+  cube.position = GLKVector3Make(0.25, 0.25, 0.0);
+  cube.scale = GLKVector3Make(0.5, 0.5, 0.5);
+  cube.rotation = GLKVector3Make(1.0/8*M_TAU, 1.0/8*M_TAU, 0);
+  [cubes addObject:cube];
+  
+  ColorfulCube *cube2 = [[ColorfulCube alloc] init];
+  cube2.position = GLKVector3Make(-0.5, -0.25, 0.0);
+  cube2.scale = GLKVector3Make(0.4, 0.4, 0.4);
+  cube2.rotation = GLKVector3Make(1.0/8*M_TAU, 0, 1.0/8*M_TAU);
+  [cubes addObject:cube2];
+  
   return YES;
 }
 
@@ -39,7 +55,7 @@
   glClearColor(0.5, 0.5, 0.5, 0.5);
   glClear(GL_COLOR_BUFFER_BIT);
     
-  [[[ColorfulCube alloc] init] draw];
+  [cubes makeObjectsPerformSelector:@selector(draw)];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

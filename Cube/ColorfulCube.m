@@ -18,11 +18,15 @@ static GLKBaseEffect *effect;
 
 @implementation ColorfulCube
 
+@synthesize position, rotation, scale;
+
 - (id)init
 {
   self = [super init];
   if (self) {
-      // Initialization code here.
+    position = GLKVector3Make(0,0,0);
+    rotation = GLKVector3Make(0,0,0);
+    scale =    GLKVector3Make(1,1,1);
   }
   
   return self;
@@ -82,16 +86,18 @@ static GLKBaseEffect *effect;
 
 - (void)draw
 {
-  GLKMatrix4 yRotation = GLKMatrix4MakeYRotation(1.0/8.0*M_TAU);
-  GLKMatrix4 xRotation = GLKMatrix4MakeXRotation(1.0/8.0*M_TAU);
-  GLKMatrix4 scale = GLKMatrix4MakeScale(0.5, 0.5, 0.5);
-  GLKMatrix4 translate = GLKMatrix4MakeTranslation(0, 0.5, 0);
+  GLKMatrix4 xRotationMatrix = GLKMatrix4MakeXRotation(rotation.x);
+  GLKMatrix4 yRotationMatrix = GLKMatrix4MakeYRotation(rotation.y);
+  GLKMatrix4 zRotationMatrix = GLKMatrix4MakeZRotation(rotation.z);
+  GLKMatrix4 scaleMatrix     = GLKMatrix4MakeScale(scale.x, scale.y, scale.z);
+  GLKMatrix4 translateMatrix = GLKMatrix4MakeTranslation(position.x, position.y, position.z);
   
-  GLKMatrix4 modelMatrix = GLKMatrix4Multiply(translate,GLKMatrix4Multiply(scale,GLKMatrix4Multiply(xRotation, yRotation)));
+  GLKMatrix4 modelMatrix = GLKMatrix4Multiply(translateMatrix,GLKMatrix4Multiply(scaleMatrix,GLKMatrix4Multiply(zRotationMatrix, GLKMatrix4Multiply(yRotationMatrix, xRotationMatrix))));
+  
   GLKMatrix4 viewMatrix = GLKMatrix4MakeLookAt(0, 0, 3, 0, 0, 0, 0, 1, 0);
   effect.transform.modelviewMatrix = GLKMatrix4Multiply(viewMatrix, modelMatrix);
   
-  effect.transform.projectionMatrix = GLKMatrix4MakePerspective(0.125*M_TAU, 1.0, 2, -1);
+  effect.transform.projectionMatrix = GLKMatrix4MakePerspective(0.125*M_TAU, 2.0/3.0, 2, -1);
   
   [effect prepareToDraw];
   

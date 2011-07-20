@@ -9,7 +9,9 @@
 #import <UIKit/UIKit.h>
 #import <GLKit/GLKit.h>
 
-@interface CubeAppDelegate : UIResponder <UIApplicationDelegate, GLKViewDelegate, GLKViewControllerDelegate>
+@interface CubeAppDelegate : UIResponder <UIApplicationDelegate, GLKViewDelegate, GLKViewControllerDelegate> {
+  NSMutableArray *cubes;
+}
 
 @property (strong, nonatomic) UIWindow *window;
 

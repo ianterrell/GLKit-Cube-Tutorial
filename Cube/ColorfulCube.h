@@ -9,7 +9,11 @@
 #import <Foundation/Foundation.h>
 #import <GLKit/GLKit.h>
 
-@interface ColorfulCube : NSObject
+@interface ColorfulCube : NSObject {
+  GLKVector3 position, rotation, scale;
+}
+
+@property GLKVector3 position, rotation, scale;
 
 - (void)draw;
 
