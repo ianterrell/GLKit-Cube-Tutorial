@@ -16,6 +16,7 @@
 		3CD22C1D13D5ED4D001844CD /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CD22C1C13D5ED4D001844CD /* OpenGLES.framework */; };
 		3CD22C1F13D5ED53001844CD /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CD22C1E13D5ED53001844CD /* GLKit.framework */; };
 		3CD22C2113D5ED58001844CD /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CD22C2013D5ED58001844CD /* QuartzCore.framework */; };
+		3CD22C2813D65C4C001844CD /* ColorfulCube.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CD22C2713D65C4B001844CD /* ColorfulCube.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		3CD22C1C13D5ED4D001844CD /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		3CD22C1E13D5ED53001844CD /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		3CD22C2013D5ED58001844CD /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		3CD22C2613D65C4B001844CD /* ColorfulCube.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorfulCube.h; sourceTree = "<group>"; };
+		3CD22C2713D65C4B001844CD /* ColorfulCube.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorfulCube.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +89,8 @@
 			children = (
 				3CD22C1413D5EBFF001844CD /* CubeAppDelegate.h */,
 				3CD22C1513D5EBFF001844CD /* CubeAppDelegate.m */,
+				3CD22C2613D65C4B001844CD /* ColorfulCube.h */,
+				3CD22C2713D65C4B001844CD /* ColorfulCube.m */,
 				3CD22C0C13D5EBFF001844CD /* Supporting Files */,
 			);
 			path = Cube;
@@ -165,6 +170,7 @@
 			files = (
 				3CD22C1213D5EBFF001844CD /* main.m in Sources */,
 				3CD22C1613D5EBFF001844CD /* CubeAppDelegate.m in Sources */,
+				3CD22C2813D65C4C001844CD /* ColorfulCube.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
